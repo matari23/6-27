@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="java">
+        function my_fun(){
+            my_window = window.open("","","width=200, height=300")
+            my_window.document.write("<p>this is 메세지 창 </p>")
+
+            /* window.open("url")
+            window.open("http://www.google.com") */
+            
+        }
+        
+        function my_close(){
+            my_window.close()
+        }
+
+    </script>
+</head>
+<body>
+    <p>click</p>
+    <button onclick="my_fun()">try it</button>
+    <button onclick="my_close()">close it</button>
+   
+</body>
+</html>

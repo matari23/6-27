@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="java">
+        window.onload=function(){
+            var header = document.getElementById("header")
+
+            header.onclick = function(){
+                alert("header 클릭")
+            }//
+            // document.getElementById("paragraph").onclick = function(){
+            //     alert("paragraph 클릭")
+            // }
+            document.getElementById("paragraph").onclick = function(e){
+                var event = e;
+                alert("paragraph 클릭");
+                event.cancelBubble = true;//익스플로러
+                if(event.stopPropagation){
+                    event.stopPropagation();//그외 브라우저
+                }
+            }
+        }
+
+    </script>
+    <style type="text/css">
+        /* *{margin: 0;padding: 0;} */
+        *{border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <div id="wrap" onclick="alert('wrap_div')">
+        <div class="inner_wrap" onclick="alert('ineer_wrap')">
+            <h1 onclick="alert('header')">
+                <span onclick="alert('문단선택')">문단문단문단</span>
+            </h1>
+        </div><!-- inner_wrap -->
+    </div><!-- wrap -->
+    <h1 id="header">
+        <span id="paragraph">문단문단문단</span>
+    </h1><!-- header -->
+</body>
+</html>

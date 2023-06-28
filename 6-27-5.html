@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script lang="java">
+        // var kk=0;
+        // let kk = 0;
+        // kk =1;
+        // const kk =5678
+        // const pi =3.141592
+
+        // const cars = ["saab","volvo","bmw"]
+        // const cars = [];
+        // cars[0] = "saab"
+        // cars[1] = "volvo"
+        // cars[2] = "bmw"
+
+        // const cars = new Array("saab","volvo","bmw")
+
+        // let car1 = cars[0]
+        // cars[0] = "Opel";
+        // document.write(cars);
+        const fruits = ["바나나","수박","사과","딸기","망고"]
+        document.getElementById("demo")
+        // demo.innerHTML = fruits.toString()
+        // demo.innerHTML = fruits[0]
+        var size = fruits.length;
+        // var Fsort = fruits.sort();
+        //demo.innerHTML = size
+        //demo.innerHTML = Fsort
+
+        // let text ="<ul>"
+        // for(var i =0; i<size ; i++){
+        //     text += "<li>"+ fruits[i] + "</li>"
+        // }
+        // text += "</ul>"
+
+        let text = "<ul>"
+            fruits.forEach(myF)
+            text += "</ul>"
+
+            function myF(value){
+                text += "<li>"+ value + "</li>"
+            }
+
+        demo.innerHTML = text;
+
+    </script>
+</body>
+</html>

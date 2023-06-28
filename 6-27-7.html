@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick=" myfun()">try it</button>
+    <p id="demo"></p>
+    <script lang="java">
+        var fruits = ["자두","딸기","망고","수박","멜론"]
+
+        document.getElementById("demo").innerHTML = fruits;
+        // function myfun(){
+        //     fruits.push("레몬")//push는 맨 마지막에 데이터를 더해주는것
+        //     document.getElementById("demo").innerHTML = fruits;
+        // }
+        // fruits.pop(); pop은 맨 마지막 데이터를 빼주는것 
+        // document.getElementById("demo").innerHTML = fruits; 
+        // fruits.shift(); //왼쪽으로 데이터를 하나씩 이동시켜주는것 
+        // document.getElementById("demo").innerHTML = fruits;
+
+        // fruits.unshift("레몬"); //맨 앞자리에 데이터를 끼어넣어 주는것
+        // document.getElementById("demo").innerHTML = fruits;
+        // var first = fruits.shift()
+        // console.log(fruits)
+        // fruits.push(first)
+        // document.getElementById("demo").innerHTML = fruits;
+
+        var last = fruits.pop();
+        console.log(last)
+        fruits.unshift(last);
+        document.getElementById("demo").innerHTML = fruits;
+    </script>
+</body>
+</html>

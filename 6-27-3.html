@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="java">
+
+        function msg(val){
+            switch(val){
+                case true :
+                    console.log("버튼을 한 번 클릭했습니다."); break;
+                case false :
+                    console.log("버튼을 두 번 클릭했습니다."); break;
+                default :
+                    alert("잘못누르셨습니다.")
+            }
+        }//메세지
+
+        var my_window;
+        function openwin(){
+            my_window = window.open(" "," ","width=400","height=400")
+        }
+
+        function win_size(res){
+            switch(res){
+                case "상" :
+                    console.log(res)
+                    my_window.moveBy(0,-50); break;
+                case "하" :
+                    my_window.moveBy(0,50); break;
+                case "좌" :
+                    my_window.moveBy(-50,0); break;
+                case "우" :
+                    my_window.moveBy(50,0); break;
+
+            }
+        }//
+
+    </script>
+</head>
+<body>
+    <p>버튼을 한 번 또는 두 번 클릭하세요.</p>
+
+    <form action="#">
+        <input type="button" value="버튼" onclick= "msg(true)" ondblclick="msg(false) ">
+    </form>
+
+    <h2>부라우저가 이동합니다</h2>
+    <form action="#">
+        <input type="button" onclick="openwin()" value="창열기">
+        <input type="button" onclick="win_size('상') " value="상">
+        <input type="button" onclick="win_size('하') " value="하">
+        <input type="button" onclick="win_size('좌') " value="좌">
+        <input type="button" onclick="win_size('우') " value="우">
+    </form>
+
+</body>
+</html>
